@@ -48,6 +48,8 @@ public class PlayerController : CharacterScript
         }
     }
 
+    // Região destinada a métodos de colisão
+    #region Trigger methods
     //método de detecção da entrada de colisão para ataque e colheita de objetos
     private void OnTriggerEnter(Collider other)
     {
@@ -76,7 +78,10 @@ public class PlayerController : CharacterScript
             StartCoroutine(SellBackObjects());
         }
     }
+    #endregion
 
+    // Região destinada a métodos de interação com os npcs
+    #region NPCs Interactions Methods
     //método para aprimoramento de carga nas costas do personagem
     public void IncrementMaxNpcsInBack(int _valueToIncrement)
     {
@@ -127,6 +132,7 @@ public class PlayerController : CharacterScript
         jointPoint.position = new Vector3(jointPoint.position.x, jointPoint.position.y + 1f, jointPoint.position.z);
         anim.SetBool("IsCarrying", true);
     }
+    #endregion
 
     //método de recepção de input para movimentação
     public void MovementAction(InputAction.CallbackContext value)

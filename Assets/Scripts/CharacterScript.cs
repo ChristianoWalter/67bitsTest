@@ -31,7 +31,7 @@ public class CharacterScript : MonoBehaviour
             canMove = true;
 
             //região destinada às mudanças dos ragdolls
-            #region Regdoll physics change
+            #region Ragdoll physics change
             leftUpLegCol.isTrigger = true;
             rightUpLegCol.isTrigger = true;
             leftLegCol.isTrigger = true;
@@ -56,7 +56,7 @@ public class CharacterScript : MonoBehaviour
             rb.velocity = Vector3.zero;
 
             //região destinada às mudanças dos ragdolls
-            #region Regdoll physics change
+            #region Ragdoll physics change
             leftUpLegCol.isTrigger = false;
             rightUpLegCol.isTrigger = false;
             leftUpLegCol.isTrigger = false;
